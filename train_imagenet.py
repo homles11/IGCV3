@@ -37,14 +37,14 @@ if __name__ == '__main__':
     data.set_data_aug_level(parser, 2)
     parser.set_defaults(
         # network
-        network          = 'mobilenetv2',
+        network          = 'igcv3',
         multiplier       = 1.0, 
-        model_prefix     = os.path.join(thisdir,'models/mobilenetv2-1_0'), 
+        model_prefix     = os.path.join(thisdir,'models/igcv3'), 
 
         # data
-        data_train       = '/teamscratch/msravcshare/v-mingjl/imagenet_data/imagenet_train.rec',
+        data_train       = './imagenet_data/imagenet_train.rec',
         # data_train_idx   = '/home/shared/ILSVRC2012_img_train_output.idx',
-        data_val         = '/teamscratch/msravcshare/v-mingjl/imagenet_data/imagenet_val.rec',
+        data_val         = './imagenet_data/imagenet_val.rec',
         # data_val_idx     = '/home/shared/ILSVRC2012_img_val_output.idx',
         num_classes      = 1000,
         num_examples     = 1281167,
