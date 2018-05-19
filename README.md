@@ -15,6 +15,7 @@ For example, running the following command can train the `IGCV3` network on Imag
 ```shell
 python train_imagenet.py --network=IGCV3 --multiplier=1.0 --gpus=0,1,2,3,4,5,6,7 --batch-size=96 --data-dir=<dataset location>
 ```
+multiplier is means how many times wider than the original IGCV3 network whose width is the same as MobileNet-V2(https://arxiv.org/pdf/1801.04381).
 
 ## Citation
 
