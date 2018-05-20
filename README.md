@@ -52,7 +52,7 @@ Comparison with MobileNetV2 on ImageNet.
 #### After Retrain
 <table > 
 <tr> <th width=100></th><th>#Params (M)</th> <th>Top-1</th> <th>Top-5</th> </tr> 
- <tr> <th>>MobileNetV2 </th><th> 3.4</th><th>71.4</th> <th>90.1</th></tr>
+ <tr> <th>MobileNetV2 </th><th> 3.4</th><th>71.4</th> <th>90.1</th></tr>
 <tr> <th>IGCV3-D </th> <th> 3.5</th> <th>72.2</th> <th>90.5</th></tr>
 </table>
 
