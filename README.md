@@ -3,17 +3,17 @@ The codes are based on https://github.com/liangfu/mxnet-mobilenet-v2.
 
 ## Prior Works
 
-### Interleaved Group Convolutions([IGCV1](https://arxiv.org/pdf/1707.02725.pdf))
+### Interleaved Group Convolutions ([IGCV1](https://arxiv.org/pdf/1707.02725.pdf))
 Interleaved Group Convolutions use a pair of two successive interleaved group convolutions: primary group convolution and secondary group convolution. The two group convolutions are complementary.
 
 ![IGC](figures/igc_ori.png)
 >  Illustrating the interleaved group convolution, with L = 2 primary partitions and M = 3 secondary partitions. The convolution for each primary partition in primary group convolution is spatial. The convolution for each secondary partition in secondary group convolution is point-wise (1 × 1).
 
-### Interleaved Structured Sparse Convolution([IGCV2](https://arxiv.org/pdf/1804.06202.pdf))
-IGCV2 extends IGCV1 by decomposing the convolution matrix in to more structured sparse matrices, which uses a depth-wise convoultion(3 × 3) to replace the primary group convoution in IGC and uses a series of point-wise group convolution(1 × 1).
+### Interleaved Structured Sparse Convolution ([IGCV2](https://arxiv.org/pdf/1804.06202.pdf))
+IGCV2 extends IGCV1 by decomposing the convolution matrix in to more structured sparse matrices, which uses a depth-wise convoultion (3 × 3) to replace the primary group convoution in IGC and uses a series of point-wise group convolution (1 × 1).
 
 
-## Interleaved Low-Rank Group Convolutions(IGCV3)
+## Interleaved Low-Rank Group Convolutions (IGCV3)
 We proposed Interleaved Low-Rank Group Convolutions, named IGCV3, extend IGCV2 by using low-rank group convolutions to replace group convoutions in IGCV2. It consists of a channel-wis spatial convolution, a low-rank group convolution with <a href="https://www.codecogs.com/eqnedit.php?latex=G_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_{1}" title="G_{1}" /></a> groups that reduces the width and a low-rank group convolution with <a href="https://www.codecogs.com/eqnedit.php?latex=G_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_{2}" title="G_{2}" /></a> groups which expands the widths back.
 
 ![IGCV3](figures/super_branch_2.PNG)
