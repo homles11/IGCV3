@@ -25,7 +25,7 @@ We compare our IGCV3 network with other Mobile Networks on CIFAR datasets which 
 #### Comparison with Other Mobile Networks
 Classification accuracy comparisons of MobileNetV2 and IGCV3 on CIFAR datasets. "Network s×" means reducing the number of parameter in "Network 1.0×" by s times.
 <table > 
-<tr> <th width=200></th><th>#Params (M)</th> <th>CIFAR-10</th> <th> CIFAR100 </th> </tr> 
+<tr> <th width=250></th><th>#Params (M)</th> <th>CIFAR-10</th> <th> CIFAR100 </th> </tr> 
 <tr> <th>MobileNetV2（our impl.）  </th><th> 2.3</th><th>94.56</th> <th>77.09</th></tr>
 <tr> <th>IGCV3-D 0.5×  </th><th> 1.2</th><th>94.73</th> <th>77.29</th></tr>
 <tr> <th>IGCV3-D 0.7× </th><th> 1.7</th><th>94.92</th> <th>77.83</th></tr>
