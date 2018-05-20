@@ -27,17 +27,17 @@ We compare our IGCV3 network with other Mobile Networks on CIFAR dataset which i
 Classification accuracy comparisons of MobileNetV2 and IGCV3 on CIFAR datasets. "Network s×" means reducing the number of parameter in "Network 1.0×" by s times.
 <table > 
 <tr> <th width=100></th><th>#Params (M)</th> <th>CIFAR-10</th> <th> CIFAR100 </th> </tr> 
-<tr> <th> </th>MobileNetV2（our impl.） <th> 2.3</th><th>94.56</th> <th>77.09</th></tr>
-<tr> <th> </th>IGCV3-D 0.5× <th> 1.2</th><th>94.73</th> <th>77.29</th></tr>
-<tr> <th> </th>IGCV3-D 0.7×<th> 1.7</th><th>94.92</th> <th>77.83</th></tr>
-<tr> <th> </th>IGCV3-D 1.0×<th> 2.4</th><th>94.96</th> <th>77.95</th></tr>
+<tr> <th>MobileNetV2（our impl.）  </th><th> 2.3</th><th>94.56</th> <th>77.09</th></tr>
+<tr> <th>IGCV3-D 0.5×  </th><th> 1.2</th><th>94.73</th> <th>77.29</th></tr>
+<tr> <th>IGCV3-D 0.7× </th><th> 1.7</th><th>94.92</th> <th>77.83</th></tr>
+<tr> <th>IGCV3-D 1.0× </th><th> 2.4</th><th>94.96</th> <th>77.95</th></tr>
 </table>
 
 #### Comparison with IGCV2
 <table > 
 <tr> <th width=100></th><th>#Params (M)</th> <th>CIFAR-10</th> <th> CIFAR100 </th> </tr> 
-<tr> <th> </th>IGCV2<th> 2.4</th><th>94.76</th> <th>77.45</th></tr>
-<tr> <th> </th>IGCV3-D<th> 2.4</th><th>94.96</th> <th>77.95</th></tr>
+<tr> <th>IGCV2 </th><th> 2.4</th><th>94.76</th> <th>77.45</th></tr>
+<tr> <th>IGCV3-D </th><th> 2.4</th><th>94.96</th> <th>77.95</th></tr>
 </table>
 
 ### ImageNet Experiments
@@ -45,15 +45,15 @@ Comparison with MobileNetV2 on ImageNet.
 #### Before Retrain
 <table > 
 <tr> <th width=100></th><th>#Params (M)</th> <th>Top-1</th> <th>Top-5</th> </tr> 
-<tr> <th> </th>MobileNetV2<th> 3.4</th><th>70.0</th> <th>89.0</th></tr>
-<tr> <th> </th>IGCV3-D<th> 3.5</th><th>70.6</th> <th>89.7</th></tr>
+<tr> <th>MobileNetV2 </th><th> 3.4</th><th>70.0</th> <th>89.0</th></tr>
+<tr> <th>IGCV3-D </th><th> 3.5</th><th>70.6</th> <th>89.7</th></tr>
 </table>
 
 #### After Retrain
 <table > 
 <tr> <th width=100></th><th>#Params (M)</th> <th>Top-1</th> <th>Top-5</th> </tr> 
-<tr> <th> </th>MobileNetV2<th> 3.4</th><th>71.4</th> <th>90.1</th></tr>
-<tr> <th> </th>IGCV3-D<th> 3.5</th><th>72.2</th> <th>90.5</th></tr>
+<tr> <th>>MobileNetV2 </th<th> 3.4</th><th>71.4</th> <th>90.1</th></tr>
+<tr> <th>IGCV3-D </th><th> 3.5</th><th>72.2</th> <th>90.5</th></tr>
 </table>
 
 ## Requirements
