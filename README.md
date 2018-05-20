@@ -10,7 +10,7 @@ Interleaved Group Convolutions use a pair of two successive interleaved group co
 >  Illustrating the interleaved group convolution, with L = 2 primary partitions and M = 3 secondary partitions. The convolution for each primary partition in primary group convolution is spatial. The convolution for each secondary partition in secondary group convolution is point-wise (1 × 1).
 
 ### Interleaved Structured Sparse Convolution ([IGCV2](https://arxiv.org/pdf/1804.06202.pdf))
-IGCV2 extends IGCV1 by decomposing the convolution matrix in to more structured sparse matrices, which uses a depth-wise convoultion (3 × 3) to replace the primary group convoution in IGC and uses a series of point-wise group convolution (1 × 1).
+IGCV2 extends IGCV1 by decomposing the convolution matrix in to more structured sparse matrices, which uses a depth-wise convoultion (3 × 3) to replace the primary group convoution in IGC and uses a series of point-wise group convolutions (1 × 1).
 
 
 ## Interleaved Low-Rank Group Convolutions (IGCV3)
