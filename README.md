@@ -55,12 +55,12 @@ Comparison with MobileNetV2 on ImageNet.
 <tr> <th>IGCV3-D </th> <th> 3.5</th> <th>72.2</th> <th>90.5</th></tr>
 </table>
 
-**IGCV3 pretrained model is released in /models folder.**
+**IGCV3 pretrained model is released in `models` folder.**
 ## Requirements
 - Install [MXNet](https://mxnet.incubator.apache.org/install/index.html)
 
 ## How to Train
-Current code supports training IGCNV3 on ImageNet, such as `IGCV3`s, `MobileNet-V2`. All the networks are contained in the `symbol` folder.
+Current code supports training IGCV3s on ImageNet. All the networks are contained in the `symbol` folder.
 
 
 For example, running the following command can train the `IGCV3` network on ImageNet.
