@@ -4,7 +4,7 @@ The codes are based on https://github.com/liangfu/mxnet-mobilenet-v2.
 ## Prior Works
 
 ### Interleaved Group Convolutions([IGCV1](https://arxiv.org/pdf/1707.02725.pdf))
-Interleaved Group Convolution uses a pair of two successive interleaved group convolutions: primary group convolution and secondary group convolution. The two group convolutions are complementary.
+Interleaved Group Convolutions use a pair of two successive interleaved group convolutions: primary group convolution and secondary group convolution. The two group convolutions are complementary.
 
 ![IGC](figures/igc_ori.png)
 >  Illustrating the interleaved group convolution, with L = 2 primary partitions and M = 3 secondary partitions. The convolution for each primary partition in primary group convolution is spatial. The convolution for each secondary partition in secondary group convolution is point-wise (1 × 1).
@@ -55,6 +55,7 @@ Comparison with MobileNetV2 on ImageNet.
 <tr> <th>IGCV3-D </th> <th> 3.5</th> <th>72.2</th> <th>90.5</th></tr>
 </table>
 
+**IGCV3 pretrained model is released in /models folder.**
 ## Requirements
 - Install [MXNet](https://mxnet.incubator.apache.org/install/index.html)
 
