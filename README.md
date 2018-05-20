@@ -15,7 +15,7 @@ IGCV2 extends IGCV1 by decomposing the convolution matrix in to more structured 
 
 
 ## Interleaved Low-Rank Group Convolutions(IGCV3)
-We proposed Interleaved Low-Rank Group Convolutions, named IGCV3, extend IGCV2 by using low-rank group convolutions to replace group convoutions in IGCV2. It consists of a channel-wis spatial convolution, a low-rank group convolution with G_1 groups that reduces the width and a low-rank group convolution with G_2 groups which expands the widths back.
+We proposed Interleaved Low-Rank Group Convolutions, named IGCV3, extend IGCV2 by using low-rank group convolutions to replace group convoutions in IGCV2. It consists of a channel-wis spatial convolution, a low-rank group convolution with G_{1} groups that reduces the width and a low-rank group convolution with G_{2} groups which expands the widths back.
 
 ![IGCV3](figures/super_branch_2.PNG)
 >  Illustrating the interleaved branches in IGCV3 block. The first group convolution is a group $1\times1$ convolution with G_1=2 groups. The second is a channel-wise spatial convolution. The third is a group 1 × 1 convolution with $G_2=2$ groups.
