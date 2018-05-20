@@ -18,7 +18,7 @@ IGCV2 extends IGCV1 by decomposing the convolution matrix in to more structured 
 We proposed Interleaved Low-Rank Group Convolutions, named IGCV3, extend IGCV2 by using low-rank group convolutions to replace group convoutions in IGCV2. It consists of a channel-wis spatial convolution, a low-rank group convolution with <a href="https://www.codecogs.com/eqnedit.php?latex=G_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_{1}" title="G_{1}" /></a> groups that reduces the width and a low-rank group convolution with <a href="https://www.codecogs.com/eqnedit.php?latex=G_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_{2}" title="G_{2}" /></a> groups which expands the widths back.
 
 ![IGCV3](figures/super_branch_2.PNG)
->  Illustrating the interleaved branches in IGCV3 block. The first group convolution is a group $1\times1$ convolution with G_1=2 groups. The second is a channel-wise spatial convolution. The third is a group 1 × 1 convolution with $G_2=2$ groups.
+>  Illustrating the interleaved branches in IGCV3 block. The first group convolution is a group 1 × 1 convolution with <a href="https://www.codecogs.com/eqnedit.php?latex=G_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_{1}" title="G_{1}" /></a>=2 groups. The second is a channel-wise spatial convolution. The third is a group 1 × 1 convolution with <a href="https://www.codecogs.com/eqnedit.php?latex=G_{2}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?G_{2}" title="G_{2}" /></a>=2 groups.
 
 ## Results
 ### CIFAR Experiments
