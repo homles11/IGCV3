@@ -112,7 +112,7 @@ Please cite our papers in your publications if it helps your research:
                Bin Xiao and
                Jingdong Wang},
   title     = {Interleaved Group Convolutions for Deep Neural Networks},
-  journal   = {CoRR},
+  journal   = {ICCV},
   volume    = {abs/1707.02725},
   year      = {2017},
   url       = {http://arxiv.org/abs/1707.02725}
@@ -128,7 +128,7 @@ Please cite our papers in your publications if it helps your research:
                Richang Hong and
                Guo{-}Jun Qi},
   title     = {{IGCV2:} Interleaved Structured Sparse Convolutional Neural Networks},
-  journal   = {CoRR},
+  journal   = {CVPR},
   volume    = {abs/1804.06202},
   year      = {2018},
   url       = {http://arxiv.org/abs/1804.06202},
