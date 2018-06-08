@@ -1,5 +1,7 @@
 # IGCV3:Interleaved Low-Rank Group Convolutions for Efficient Deep Neural Networks.
 The codes are based on https://github.com/liangfu/mxnet-mobilenet-v2.
+>  IGCV3: Interleaved Low-Rank Group Convolutions for Efficient Deep Neural Networks. Ke Sun, Mingjie Li, Dong Liu, and Jingdong Wang. 
+arXiv preprint [arXIV:1806.00178](https://arxiv.org/pdf/1806.00178.pdf) (2017)
 
 ## Prior Works
 
@@ -137,5 +139,18 @@ Please cite our papers in your publications if it helps your research:
   timestamp = {Wed, 02 May 2018 15:55:01 +0200},
   biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1804-06202},
   bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+```
+```
+@article{KeSun18,
+  author    = {Ke Sun and
+               Mingjie Li and
+               Dong Liu and
+               Jingdong Wang},
+  title     = {IGCV3: Interleaved Low-Rank Group Convolutions for Efficient Deep Neural Networks},
+  journal   = {CoRR},
+  volume    = {abs/1806.00178},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1806.00178}
 }
 ```
