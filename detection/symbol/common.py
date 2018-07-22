@@ -305,9 +305,16 @@ def multibox_layer(from_layers, num_classes, sizes=[.2, .95],
         # bias = mx.symbol.Variable(name="{}_loc_pred_conv_bias".format(from_name),
         #                                init=mx.init.Constant(0.0), attr={'__lr_mult__': '2.0'})
         loc_pred = mx.symbol.Convolution(data=from_layer, kernel=(3, 3), \
-                                         stride=(1, 1), pad=(1, 1), num_filter=num_loc_pred, \
-                                         name="{}_loc_pred_conv_dw".format(from_name))
+                                         stride=(1, 1), pad=(1, 1), num_filter=num_filter, \
+                                         name="{}_loc_pred_conv_dw".format(from_name), num_group=num_filter,
+                                         no_bias=True)
         loc_pred = mx.sym.BatchNorm(data=loc_pred, name="{}_loc_pred_bn1".format(from_name), momentum=0.9, eps=0.001,
+                                    cudnn_off=True)
+        loc_pred = Relu6(loc_pred)
+        loc_pred = mx.symbol.Convolution(data=loc_pred, kernel=(1, 1), \
+                                         stride=(1, 1), pad=(0, 0), num_filter=num_loc_pred, \
+                                         name="{}_loc_pred_conv_pw".format(from_name))
+        loc_pred = mx.sym.BatchNorm(data=loc_pred, name="{}_loc_pred_bn2".format(from_name), momentum=0.9, eps=0.001,
                                     cudnn_off=True)
         loc_pred = mx.symbol.transpose(loc_pred, axes=(0, 2, 3, 1))
         loc_pred = mx.symbol.Flatten(data=loc_pred)
@@ -316,9 +323,17 @@ def multibox_layer(from_layers, num_classes, sizes=[.2, .95],
         # create class prediction layer
         num_cls_pred = num_anchors * num_classes
         cls_pred = mx.symbol.Convolution(data=from_layer, kernel=(3, 3), \
-                                         stride=(1, 1), pad=(1, 1), num_filter=num_cls_pred, \
-                                         name="{}_cls_pred_conv_dw".format(from_name))  # ,num_group=num_filter if interm_layer<=0 else interm_layer
-        cls_pred = mx.sym.BatchNorm(data=cls_pred, name="{}_cls_pred_bn1".format(from_name),momentum=0.9,eps=0.001,cudnn_off=True)
+                                         stride=(1, 1), pad=(1, 1), num_filter=num_filter, \
+                                         name="{}_cls_pred_conv_dw".format(from_name),num_group=num_filter,
+                                         no_bias=True)  # ,num_group=num_filter if interm_layer<=0 else interm_layer
+        cls_pred = mx.sym.BatchNorm(data=cls_pred, name="{}_cls_pred_bn1".format(from_name),momentum=0.9,eps=0.001,
+                                    cudnn_off=True)
+        cls_pred = Relu6(cls_pred)
+        cls_pred = mx.symbol.Convolution(data=cls_pred, kernel=(1, 1), \
+                                         stride=(1, 1), pad=(0, 0), num_filter=num_cls_pred, \
+                                         name="{}_cls_pred_conv_pw".format(from_name))
+        cls_pred = mx.sym.BatchNorm(data=cls_pred, name="{}_cls_pred_bn2".format(from_name), momentum=0.9, eps=0.001,
+                                    cudnn_off=True)
         cls_pred = mx.symbol.transpose(cls_pred, axes=(0, 2, 3, 1))
         cls_pred = mx.symbol.Flatten(data=cls_pred)
         cls_pred_layers.append(cls_pred)
