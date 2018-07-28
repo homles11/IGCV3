@@ -1,0 +1,6895 @@
+{
+  "nodes": [
+    {
+      "op": "null", 
+      "name": "data", 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "conv0_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "conv0", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "pad": "(1, 1)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[0, 0, 0], [1, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "bn0_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "bn0_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "bn0_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "bn0_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "bn0", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[2, 0, 0], [3, 0, 0], [4, 0, 0], [5, 0, 1], [6, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar0", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[7, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar0", 
+      "attr": {
+        "__mirror_stage__": "True", 
+        "scalar": "6"
+      }, 
+      "inputs": [[8, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk0nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk0nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[9, 0, 0], [10, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm0_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm0_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm0_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm0_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm0", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[11, 0, 0], [12, 0, 0], [13, 0, 0], [14, 0, 1], [15, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar1", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[16, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar1", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[17, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk0_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "num_group": "32", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk0_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "num_group": "32", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[18, 0, 0], [19, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm1_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm1_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm1_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm1_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm1", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[20, 0, 0], [21, 0, 0], [22, 0, 0], [23, 0, 1], [24, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar2", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[25, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar2", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[26, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape0", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[27, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes0", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[28, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape1", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[29, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk0_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk0_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "32", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[30, 0, 0], [31, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm2_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm2_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm2_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm2_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm2", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[32, 0, 0], [33, 0, 0], [34, 0, 0], [35, 0, 1], [36, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape2", 
+      "attr": {"shape": "(0, -4, 8, -1, -2)"}, 
+      "inputs": [[37, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes1", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[38, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape3", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[39, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus0", 
+      "inputs": [[9, 0, 0], [40, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk1nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "2", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk1nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "2", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[41, 0, 0], [42, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm3_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm3_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm3_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm3_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm3", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[43, 0, 0], [44, 0, 0], [45, 0, 0], [46, 0, 1], [47, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar3", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[48, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar3", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[49, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk1_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "192", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk1_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "192", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[50, 0, 0], [51, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm4_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm4_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm4_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm4_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm4", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[52, 0, 0], [53, 0, 0], [54, 0, 0], [55, 0, 1], [56, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar4", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[57, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar4", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[58, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape4", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[59, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes2", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[60, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape5", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[61, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk1_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk1_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[62, 0, 0], [63, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm5_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm5_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm5_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm5_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm5", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[64, 0, 0], [65, 0, 0], [66, 0, 0], [67, 0, 1], [68, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape6", 
+      "attr": {"shape": "(0, -4, 12, -1, -2)"}, 
+      "inputs": [[69, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes3", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[70, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape7", 
+      "attr": {
+        "__mirror_stage__": "True", 
+        "shape": "(0, -3, -2)"
+      }, 
+      "inputs": [[71, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk2nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "288", 
+        "num_group": "2", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk2nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "288", 
+        "num_group": "2", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[72, 0, 0], [73, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm6_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm6_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm6_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm6_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm6", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[74, 0, 0], [75, 0, 0], [76, 0, 0], [77, 0, 1], [78, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar5", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[79, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar5", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[80, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk2_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "288", 
+        "num_group": "288", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk2_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "288", 
+        "num_group": "288", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[81, 0, 0], [82, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm7_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm7_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm7_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm7_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm7", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[83, 0, 0], [84, 0, 0], [85, 0, 0], [86, 0, 1], [87, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar6", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[88, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar6", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[89, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape8", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[90, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes4", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[91, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape9", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[92, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk2_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk2_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "48", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[93, 0, 0], [94, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm8_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm8_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm8_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm8_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm8", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[95, 0, 0], [96, 0, 0], [97, 0, 0], [98, 0, 1], [99, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape10", 
+      "attr": {"shape": "(0, -4, 12, -1, -2)"}, 
+      "inputs": [[100, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes5", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[101, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape11", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[102, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus1", 
+      "inputs": [[72, 0, 0], [103, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk3nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "288", 
+        "num_group": "2", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk3nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "288", 
+        "num_group": "2", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[104, 0, 0], [105, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm9_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm9_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm9_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm9_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm9", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[106, 0, 0], [107, 0, 0], [108, 0, 0], [109, 0, 1], [110, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar7", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[111, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar7", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[112, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk3_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "288", 
+        "num_group": "288", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk3_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "288", 
+        "num_group": "288", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[113, 0, 0], [114, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm10_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm10_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm10_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm10_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm10", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[115, 0, 0], [116, 0, 0], [117, 0, 0], [118, 0, 1], [119, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar8", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[120, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar8", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[121, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape12", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[122, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes6", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[123, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape13", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[124, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk3_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk3_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[125, 0, 0], [126, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm11_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm11_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm11_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm11_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm11", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[127, 0, 0], [128, 0, 0], [129, 0, 0], [130, 0, 1], [131, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape14", 
+      "attr": {"shape": "(0, -4, 16, -1, -2)"}, 
+      "inputs": [[132, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes7", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[133, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape15", 
+      "attr": {
+        "__mirror_stage__": "True", 
+        "shape": "(0, -3, -2)"
+      }, 
+      "inputs": [[134, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk4nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk4nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[135, 0, 0], [136, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm12_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm12_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm12_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm12_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm12", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[137, 0, 0], [138, 0, 0], [139, 0, 0], [140, 0, 1], [141, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar9", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[142, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar9", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[143, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk4_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "384", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk4_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "384", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[144, 0, 0], [145, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm13_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm13_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm13_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm13_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm13", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[146, 0, 0], [147, 0, 0], [148, 0, 0], [149, 0, 1], [150, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar10", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[151, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar10", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[152, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape16", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[153, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes8", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[154, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape17", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[155, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk4_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk4_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[156, 0, 0], [157, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm14_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm14_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm14_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm14_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm14", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[158, 0, 0], [159, 0, 0], [160, 0, 0], [161, 0, 1], [162, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape18", 
+      "attr": {"shape": "(0, -4, 16, -1, -2)"}, 
+      "inputs": [[163, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes9", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[164, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape19", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[165, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus2", 
+      "attr": {"__mirror_stage__": "True"}, 
+      "inputs": [[135, 0, 0], [166, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk5nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk5nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[167, 0, 0], [168, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm15_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm15_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm15_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm15_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm15", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[169, 0, 0], [170, 0, 0], [171, 0, 0], [172, 0, 1], [173, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar11", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[174, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar11", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[175, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk5_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "384", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk5_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "384", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[176, 0, 0], [177, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm16_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm16_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm16_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm16_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm16", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[178, 0, 0], [179, 0, 0], [180, 0, 0], [181, 0, 1], [182, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar12", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[183, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar12", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[184, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape20", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[185, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes10", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[186, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape21", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[187, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk5_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk5_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "64", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[188, 0, 0], [189, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm17_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm17_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm17_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm17_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm17", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[190, 0, 0], [191, 0, 0], [192, 0, 0], [193, 0, 1], [194, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape22", 
+      "attr": {"shape": "(0, -4, 16, -1, -2)"}, 
+      "inputs": [[195, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes11", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[196, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape23", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[197, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus3", 
+      "inputs": [[167, 0, 0], [198, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk6nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk6nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[199, 0, 0], [200, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm18_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm18_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm18_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm18_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm18", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[201, 0, 0], [202, 0, 0], [203, 0, 0], [204, 0, 1], [205, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar13", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[206, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar13", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[207, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk6_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "384", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk6_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "384", 
+        "num_group": "384", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[208, 0, 0], [209, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm19_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm19_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm19_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm19_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm19", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[210, 0, 0], [211, 0, 0], [212, 0, 0], [213, 0, 1], [214, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar14", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[215, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar14", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[216, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape24", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[217, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes12", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[218, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape25", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[219, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk6_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk6_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[220, 0, 0], [221, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm20_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm20_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm20_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm20_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm20", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[222, 0, 0], [223, 0, 0], [224, 0, 0], [225, 0, 1], [226, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape26", 
+      "attr": {"shape": "(0, -4, 32, -1, -2)"}, 
+      "inputs": [[227, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes13", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[228, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape27", 
+      "attr": {
+        "__mirror_stage__": "True", 
+        "shape": "(0, -3, -2)"
+      }, 
+      "inputs": [[229, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk7nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk7nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[230, 0, 0], [231, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm21_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm21_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm21_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm21_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm21", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[232, 0, 0], [233, 0, 0], [234, 0, 0], [235, 0, 1], [236, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar15", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[237, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar15", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[238, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk7_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "768", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk7_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "768", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[239, 0, 0], [240, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm22_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm22_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm22_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm22_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm22", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[241, 0, 0], [242, 0, 0], [243, 0, 0], [244, 0, 1], [245, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar16", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[246, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar16", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[247, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape28", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[248, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes14", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[249, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape29", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[250, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk7_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk7_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[251, 0, 0], [252, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm23_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm23_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm23_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm23_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm23", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[253, 0, 0], [254, 0, 0], [255, 0, 0], [256, 0, 1], [257, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape30", 
+      "attr": {"shape": "(0, -4, 32, -1, -2)"}, 
+      "inputs": [[258, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes15", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[259, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape31", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[260, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus4", 
+      "attr": {"__mirror_stage__": "True"}, 
+      "inputs": [[230, 0, 0], [261, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk8nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk8nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[262, 0, 0], [263, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm24_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm24_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm24_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm24_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm24", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[264, 0, 0], [265, 0, 0], [266, 0, 0], [267, 0, 1], [268, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar17", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[269, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar17", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[270, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk8_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "768", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk8_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "768", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[271, 0, 0], [272, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm25_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm25_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm25_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm25_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm25", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[273, 0, 0], [274, 0, 0], [275, 0, 0], [276, 0, 1], [277, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar18", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[278, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar18", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[279, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape32", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[280, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes16", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[281, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape33", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[282, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk8_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk8_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[283, 0, 0], [284, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm26_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm26_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm26_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm26_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm26", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[285, 0, 0], [286, 0, 0], [287, 0, 0], [288, 0, 1], [289, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape34", 
+      "attr": {"shape": "(0, -4, 32, -1, -2)"}, 
+      "inputs": [[290, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes17", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[291, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape35", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[292, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus5", 
+      "attr": {"__mirror_stage__": "True"}, 
+      "inputs": [[262, 0, 0], [293, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk9nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk9nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[294, 0, 0], [295, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm27_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm27_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm27_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm27_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm27", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[296, 0, 0], [297, 0, 0], [298, 0, 0], [299, 0, 1], [300, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar19", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[301, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar19", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[302, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk9_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "768", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk9_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "768", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[303, 0, 0], [304, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm28_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm28_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm28_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm28_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm28", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[305, 0, 0], [306, 0, 0], [307, 0, 0], [308, 0, 1], [309, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar20", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[310, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar20", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[311, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape36", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[312, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes18", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[313, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape37", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[314, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk9_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk9_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[315, 0, 0], [316, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm29_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm29_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm29_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm29_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm29", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[317, 0, 0], [318, 0, 0], [319, 0, 0], [320, 0, 1], [321, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape38", 
+      "attr": {"shape": "(0, -4, 32, -1, -2)"}, 
+      "inputs": [[322, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes19", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[323, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape39", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[324, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus6", 
+      "inputs": [[294, 0, 0], [325, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk10_igc_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk10_igc_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "128", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[326, 0, 0], [327, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm33_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm33_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm33_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm33_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm33", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[328, 0, 0], [329, 0, 0], [330, 0, 0], [331, 0, 1], [332, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape44", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[333, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes22", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[334, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape45", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[335, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk10_igc_nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk10_igc_nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[336, 0, 0], [337, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm34_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm34_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm34_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm34_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm34", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[338, 0, 0], [339, 0, 0], [340, 0, 0], [341, 0, 1], [342, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar23", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[343, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar23", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[344, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape46", 
+      "attr": {"shape": "(0, -4, 48, -1, -2)"}, 
+      "inputs": [[345, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes23", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[346, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape47", 
+      "attr": {
+        "__mirror_stage__": "True", 
+        "shape": "(0, -3, -2)"
+      }, 
+      "inputs": [[347, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk10nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk10nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[326, 0, 0], [349, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm30_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm30_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm30_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm30_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm30", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[350, 0, 0], [351, 0, 0], [352, 0, 0], [353, 0, 1], [354, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar21", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[355, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar21", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[356, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk10_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "768", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk10_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "768", 
+        "num_group": "768", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[357, 0, 0], [358, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm31_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm31_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm31_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm31_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm31", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[359, 0, 0], [360, 0, 0], [361, 0, 0], [362, 0, 1], [363, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar22", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[364, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar22", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[365, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape40", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[366, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes20", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[367, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape41", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[368, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk10_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk10_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[369, 0, 0], [370, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm32_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm32_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm32_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm32_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm32", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[371, 0, 0], [372, 0, 0], [373, 0, 0], [374, 0, 1], [375, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape42", 
+      "attr": {"shape": "(0, -4, 48, -1, -2)"}, 
+      "inputs": [[376, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes21", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[377, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape43", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[378, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus7", 
+      "attr": {"__mirror_stage__": "True"}, 
+      "inputs": [[348, 0, 0], [379, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk11nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk11nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[380, 0, 0], [381, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm35_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm35_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm35_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm35_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm35", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[382, 0, 0], [383, 0, 0], [384, 0, 0], [385, 0, 1], [386, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar24", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[387, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar24", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[388, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk11_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "1152", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk11_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "1152", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[389, 0, 0], [390, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm36_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm36_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm36_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm36_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm36", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[391, 0, 0], [392, 0, 0], [393, 0, 0], [394, 0, 1], [395, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar25", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[396, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar25", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[397, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape48", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[398, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes24", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[399, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape49", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[400, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk11_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk11_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[401, 0, 0], [402, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm37_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm37_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm37_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm37_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm37", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[403, 0, 0], [404, 0, 0], [405, 0, 0], [406, 0, 1], [407, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape50", 
+      "attr": {"shape": "(0, -4, 48, -1, -2)"}, 
+      "inputs": [[408, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes25", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[409, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape51", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[410, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus8", 
+      "attr": {"__mirror_stage__": "True"}, 
+      "inputs": [[380, 0, 0], [411, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk12nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk12nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[412, 0, 0], [413, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm38_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm38_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm38_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm38_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm38", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[414, 0, 0], [415, 0, 0], [416, 0, 0], [417, 0, 1], [418, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar26", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[419, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar26", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[420, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk12_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "1152", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk12_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "1152", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[421, 0, 0], [422, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm39_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm39_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm39_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm39_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm39", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[423, 0, 0], [424, 0, 0], [425, 0, 0], [426, 0, 1], [427, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar27", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[428, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar27", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[429, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape52", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[430, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes26", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[431, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape53", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[432, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk12_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk12_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "192", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[433, 0, 0], [434, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm40_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm40_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm40_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm40_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm40", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[435, 0, 0], [436, 0, 0], [437, 0, 0], [438, 0, 1], [439, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape54", 
+      "attr": {"shape": "(0, -4, 48, -1, -2)"}, 
+      "inputs": [[440, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes27", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[441, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape55", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[442, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus9", 
+      "inputs": [[412, 0, 0], [443, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk13nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk13nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[444, 0, 0], [445, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm41_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm41_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm41_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm41_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm41", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[446, 0, 0], [447, 0, 0], [448, 0, 0], [449, 0, 1], [450, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar28", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[451, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar28", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[452, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk13_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "1152", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk13_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1152", 
+        "num_group": "1152", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[453, 0, 0], [454, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm42_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm42_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm42_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm42_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm42", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[455, 0, 0], [456, 0, 0], [457, 0, 0], [458, 0, 1], [459, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar29", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[460, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar29", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[461, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape56", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[462, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes28", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[463, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape57", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[464, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk13_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "320", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk13_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "320", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(2, 2)"
+      }, 
+      "inputs": [[465, 0, 0], [466, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm43_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm43_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm43_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm43_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm43", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[467, 0, 0], [468, 0, 0], [469, 0, 0], [470, 0, 1], [471, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape58", 
+      "attr": {"shape": "(0, -4, 80, -1, -2)"}, 
+      "inputs": [[472, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes29", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[473, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape59", 
+      "attr": {
+        "__mirror_stage__": "True", 
+        "shape": "(0, -3, -2)"
+      }, 
+      "inputs": [[474, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk14nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk14nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[475, 0, 0], [476, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm44_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm44_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm44_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm44_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm44", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[477, 0, 0], [478, 0, 0], [479, 0, 0], [480, 0, 1], [481, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar30", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[482, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar30", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[483, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk14_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "1920", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk14_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "1920", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[484, 0, 0], [485, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm45_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm45_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm45_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm45_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm45", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[486, 0, 0], [487, 0, 0], [488, 0, 0], [489, 0, 1], [490, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar31", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[491, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar31", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[492, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape60", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[493, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes30", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[494, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape61", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[495, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk14_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "320", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk14_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "320", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[496, 0, 0], [497, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm46_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm46_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm46_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm46_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm46", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[498, 0, 0], [499, 0, 0], [500, 0, 0], [501, 0, 1], [502, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape62", 
+      "attr": {"shape": "(0, -4, 80, -1, -2)"}, 
+      "inputs": [[503, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes31", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[504, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape63", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[505, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus10", 
+      "attr": {"__mirror_stage__": "True"}, 
+      "inputs": [[475, 0, 0], [506, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk15nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk15nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[507, 0, 0], [508, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm47_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm47_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm47_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm47_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm47", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[509, 0, 0], [510, 0, 0], [511, 0, 0], [512, 0, 1], [513, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar32", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[514, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar32", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[515, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk15_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "1920", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk15_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "1920", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[516, 0, 0], [517, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm48_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm48_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm48_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm48_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm48", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[518, 0, 0], [519, 0, 0], [520, 0, 0], [521, 0, 1], [522, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar33", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[523, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar33", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[524, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape64", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[525, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes32", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[526, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape65", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[527, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk15_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "320", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk15_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "320", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[528, 0, 0], [529, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm49_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm49_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm49_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm49_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm49", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[530, 0, 0], [531, 0, 0], [532, 0, 0], [533, 0, 1], [534, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape66", 
+      "attr": {"shape": "(0, -4, 80, -1, -2)"}, 
+      "inputs": [[535, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes33", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[536, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape67", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[537, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus11", 
+      "inputs": [[507, 0, 0], [538, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk16_igc_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "320", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk16_igc_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "320", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[539, 0, 0], [540, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm53_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm53_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm53_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm53_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm53", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[541, 0, 0], [542, 0, 0], [543, 0, 0], [544, 0, 1], [545, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape72", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[546, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes36", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[547, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape73", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[548, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk16_igc_nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "640", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk16_igc_nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "640", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[549, 0, 0], [550, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm54_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm54_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm54_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm54_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm54", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[551, 0, 0], [552, 0, 0], [553, 0, 0], [554, 0, 1], [555, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar36", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[556, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar36", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[557, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape74", 
+      "attr": {"shape": "(0, -4, 160, -1, -2)"}, 
+      "inputs": [[558, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes37", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[559, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape75", 
+      "attr": {
+        "__mirror_stage__": "True", 
+        "shape": "(0, -3, -2)"
+      }, 
+      "inputs": [[560, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk16nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk16nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[539, 0, 0], [562, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm50_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm50_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm50_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm50_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm50", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[563, 0, 0], [564, 0, 0], [565, 0, 0], [566, 0, 1], [567, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar34", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[568, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar34", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[569, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk16_dw_weight", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "1920", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk16_dw", 
+      "attr": {
+        "kernel": "(3, 3)", 
+        "no_bias": "True", 
+        "num_filter": "1920", 
+        "num_group": "1920", 
+        "pad": "(1, 1)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[570, 0, 0], [571, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm51_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm51_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm51_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm51_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm51", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[572, 0, 0], [573, 0, 0], [574, 0, 0], [575, 0, 1], [576, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar35", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[577, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar35", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[578, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape68", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[579, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes34", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[580, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape69", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[581, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "blk16_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "640", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "blk16_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "640", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[582, 0, 0], [583, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm52_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm52_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm52_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm52_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm52", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[584, 0, 0], [585, 0, 0], [586, 0, 0], [587, 0, 1], [588, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape70", 
+      "attr": {"shape": "(0, -4, 160, -1, -2)"}, 
+      "inputs": [[589, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes35", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[590, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape71", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[591, 0, 0]]
+    }, 
+    {
+      "op": "elemwise_add", 
+      "name": "_plus12", 
+      "inputs": [[561, 0, 0], [592, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "final_conv_ln_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "640", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "final_conv_ln_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "640", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[593, 0, 0], [594, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm55_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm55_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm55_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm55_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm55", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[595, 0, 0], [596, 0, 0], [597, 0, 0], [598, 0, 1], [599, 0, 1]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape76", 
+      "attr": {"shape": "(0, -4, 4, -1, -2)"}, 
+      "inputs": [[600, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes38", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[601, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape77", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[602, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "final_conv_nl_1_weight", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1280", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "Convolution", 
+      "name": "final_conv_nl_1", 
+      "attr": {
+        "kernel": "(1, 1)", 
+        "no_bias": "True", 
+        "num_filter": "1280", 
+        "num_group": "4", 
+        "pad": "(0, 0)", 
+        "stride": "(1, 1)"
+      }, 
+      "inputs": [[603, 0, 0], [604, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm56_gamma", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm56_beta", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm56_moving_mean", 
+      "attr": {
+        "__init__": "[\"zero\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "batchnorm56_moving_var", 
+      "attr": {
+        "__init__": "[\"one\", {}]", 
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "BatchNorm", 
+      "name": "batchnorm56", 
+      "attr": {
+        "fix_gamma": "False", 
+        "momentum": "0.9", 
+        "use_global_stats": "False"
+      }, 
+      "inputs": [[605, 0, 0], [606, 0, 0], [607, 0, 0], [608, 0, 1], [609, 0, 1]]
+    }, 
+    {
+      "op": "_maximum_scalar", 
+      "name": "_maximumscalar37", 
+      "attr": {"scalar": "0"}, 
+      "inputs": [[610, 0, 0]]
+    }, 
+    {
+      "op": "_minimum_scalar", 
+      "name": "_minimumscalar37", 
+      "attr": {"scalar": "6"}, 
+      "inputs": [[611, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape78", 
+      "attr": {"shape": "(0, -4, 320, -1, -2)"}, 
+      "inputs": [[612, 0, 0]]
+    }, 
+    {
+      "op": "SwapAxis", 
+      "name": "swapaxes39", 
+      "attr": {
+        "dim1": "1", 
+        "dim2": "2"
+      }, 
+      "inputs": [[613, 0, 0]]
+    }, 
+    {
+      "op": "Reshape", 
+      "name": "reshape79", 
+      "attr": {"shape": "(0, -3, -2)"}, 
+      "inputs": [[614, 0, 0]]
+    }, 
+    {
+      "op": "Pooling", 
+      "name": "pooling0", 
+      "attr": {
+        "global_pool": "True", 
+        "kernel": "(7, 7)", 
+        "pool_type": "avg"
+      }, 
+      "inputs": [[615, 0, 0]]
+    }, 
+    {
+      "op": "Flatten", 
+      "name": "flatten0", 
+      "inputs": [[616, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "fullyconnected0_weight", 
+      "attr": {
+        "no_bias": "False", 
+        "num_hidden": "1000"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "null", 
+      "name": "fullyconnected0_bias", 
+      "attr": {
+        "no_bias": "False", 
+        "num_hidden": "1000"
+      }, 
+      "inputs": []
+    }, 
+    {
+      "op": "FullyConnected", 
+      "name": "fullyconnected0", 
+      "attr": {
+        "no_bias": "False", 
+        "num_hidden": "1000"
+      }, 
+      "inputs": [[617, 0, 0], [618, 0, 0], [619, 0, 0]]
+    }, 
+    {
+      "op": "null", 
+      "name": "softmax_label", 
+      "inputs": []
+    }, 
+    {
+      "op": "SoftmaxOutput", 
+      "name": "softmax", 
+      "inputs": [[620, 0, 0], [621, 0, 0]]
+    }
+  ], 
+  "arg_nodes": [
+    0, 
+    1, 
+    3, 
+    4, 
+    5, 
+    6, 
+    10, 
+    12, 
+    13, 
+    14, 
+    15, 
+    19, 
+    21, 
+    22, 
+    23, 
+    24, 
+    31, 
+    33, 
+    34, 
+    35, 
+    36, 
+    42, 
+    44, 
+    45, 
+    46, 
+    47, 
+    51, 
+    53, 
+    54, 
+    55, 
+    56, 
+    63, 
+    65, 
+    66, 
+    67, 
+    68, 
+    73, 
+    75, 
+    76, 
+    77, 
+    78, 
+    82, 
+    84, 
+    85, 
+    86, 
+    87, 
+    94, 
+    96, 
+    97, 
+    98, 
+    99, 
+    105, 
+    107, 
+    108, 
+    109, 
+    110, 
+    114, 
+    116, 
+    117, 
+    118, 
+    119, 
+    126, 
+    128, 
+    129, 
+    130, 
+    131, 
+    136, 
+    138, 
+    139, 
+    140, 
+    141, 
+    145, 
+    147, 
+    148, 
+    149, 
+    150, 
+    157, 
+    159, 
+    160, 
+    161, 
+    162, 
+    168, 
+    170, 
+    171, 
+    172, 
+    173, 
+    177, 
+    179, 
+    180, 
+    181, 
+    182, 
+    189, 
+    191, 
+    192, 
+    193, 
+    194, 
+    200, 
+    202, 
+    203, 
+    204, 
+    205, 
+    209, 
+    211, 
+    212, 
+    213, 
+    214, 
+    221, 
+    223, 
+    224, 
+    225, 
+    226, 
+    231, 
+    233, 
+    234, 
+    235, 
+    236, 
+    240, 
+    242, 
+    243, 
+    244, 
+    245, 
+    252, 
+    254, 
+    255, 
+    256, 
+    257, 
+    263, 
+    265, 
+    266, 
+    267, 
+    268, 
+    272, 
+    274, 
+    275, 
+    276, 
+    277, 
+    284, 
+    286, 
+    287, 
+    288, 
+    289, 
+    295, 
+    297, 
+    298, 
+    299, 
+    300, 
+    304, 
+    306, 
+    307, 
+    308, 
+    309, 
+    316, 
+    318, 
+    319, 
+    320, 
+    321, 
+    327, 
+    329, 
+    330, 
+    331, 
+    332, 
+    337, 
+    339, 
+    340, 
+    341, 
+    342, 
+    349, 
+    351, 
+    352, 
+    353, 
+    354, 
+    358, 
+    360, 
+    361, 
+    362, 
+    363, 
+    370, 
+    372, 
+    373, 
+    374, 
+    375, 
+    381, 
+    383, 
+    384, 
+    385, 
+    386, 
+    390, 
+    392, 
+    393, 
+    394, 
+    395, 
+    402, 
+    404, 
+    405, 
+    406, 
+    407, 
+    413, 
+    415, 
+    416, 
+    417, 
+    418, 
+    422, 
+    424, 
+    425, 
+    426, 
+    427, 
+    434, 
+    436, 
+    437, 
+    438, 
+    439, 
+    445, 
+    447, 
+    448, 
+    449, 
+    450, 
+    454, 
+    456, 
+    457, 
+    458, 
+    459, 
+    466, 
+    468, 
+    469, 
+    470, 
+    471, 
+    476, 
+    478, 
+    479, 
+    480, 
+    481, 
+    485, 
+    487, 
+    488, 
+    489, 
+    490, 
+    497, 
+    499, 
+    500, 
+    501, 
+    502, 
+    508, 
+    510, 
+    511, 
+    512, 
+    513, 
+    517, 
+    519, 
+    520, 
+    521, 
+    522, 
+    529, 
+    531, 
+    532, 
+    533, 
+    534, 
+    540, 
+    542, 
+    543, 
+    544, 
+    545, 
+    550, 
+    552, 
+    553, 
+    554, 
+    555, 
+    562, 
+    564, 
+    565, 
+    566, 
+    567, 
+    571, 
+    573, 
+    574, 
+    575, 
+    576, 
+    583, 
+    585, 
+    586, 
+    587, 
+    588, 
+    594, 
+    596, 
+    597, 
+    598, 
+    599, 
+    604, 
+    606, 
+    607, 
+    608, 
+    609, 
+    618, 
+    619, 
+    621
+  ], 
+  "node_row_ptr": [
+    0, 
+    1, 
+    2, 
+    3, 
+    4, 
+    5, 
+    6, 
+    7, 
+    10, 
+    11, 
+    12, 
+    13, 
+    14, 
+    15, 
+    16, 
+    17, 
+    18, 
+    21, 
+    22, 
+    23, 
+    24, 
+    25, 
+    26, 
+    27, 
+    28, 
+    29, 
+    32, 
+    33, 
+    34, 
+    35, 
+    36, 
+    37, 
+    38, 
+    39, 
+    40, 
+    41, 
+    42, 
+    43, 
+    46, 
+    47, 
+    48, 
+    49, 
+    50, 
+    51, 
+    52, 
+    53, 
+    54, 
+    55, 
+    56, 
+    59, 
+    60, 
+    61, 
+    62, 
+    63, 
+    64, 
+    65, 
+    66, 
+    67, 
+    70, 
+    71, 
+    72, 
+    73, 
+    74, 
+    75, 
+    76, 
+    77, 
+    78, 
+    79, 
+    80, 
+    81, 
+    84, 
+    85, 
+    86, 
+    87, 
+    88, 
+    89, 
+    90, 
+    91, 
+    92, 
+    93, 
+    96, 
+    97, 
+    98, 
+    99, 
+    100, 
+    101, 
+    102, 
+    103, 
+    104, 
+    107, 
+    108, 
+    109, 
+    110, 
+    111, 
+    112, 
+    113, 
+    114, 
+    115, 
+    116, 
+    117, 
+    118, 
+    121, 
+    122, 
+    123, 
+    124, 
+    125, 
+    126, 
+    127, 
+    128, 
+    129, 
+    130, 
+    131, 
+    134, 
+    135, 
+    136, 
+    137, 
+    138, 
+    139, 
+    140, 
+    141, 
+    142, 
+    145, 
+    146, 
+    147, 
+    148, 
+    149, 
+    150, 
+    151, 
+    152, 
+    153, 
+    154, 
+    155, 
+    156, 
+    159, 
+    160, 
+    161, 
+    162, 
+    163, 
+    164, 
+    165, 
+    166, 
+    167, 
+    168, 
+    171, 
+    172, 
+    173, 
+    174, 
+    175, 
+    176, 
+    177, 
+    178, 
+    179, 
+    182, 
+    183, 
+    184, 
+    185, 
+    186, 
+    187, 
+    188, 
+    189, 
+    190, 
+    191, 
+    192, 
+    193, 
+    196, 
+    197, 
+    198, 
+    199, 
+    200, 
+    201, 
+    202, 
+    203, 
+    204, 
+    205, 
+    206, 
+    209, 
+    210, 
+    211, 
+    212, 
+    213, 
+    214, 
+    215, 
+    216, 
+    217, 
+    220, 
+    221, 
+    222, 
+    223, 
+    224, 
+    225, 
+    226, 
+    227, 
+    228, 
+    229, 
+    230, 
+    231, 
+    234, 
+    235, 
+    236, 
+    237, 
+    238, 
+    239, 
+    240, 
+    241, 
+    242, 
+    243, 
+    244, 
+    247, 
+    248, 
+    249, 
+    250, 
+    251, 
+    252, 
+    253, 
+    254, 
+    255, 
+    258, 
+    259, 
+    260, 
+    261, 
+    262, 
+    263, 
+    264, 
+    265, 
+    266, 
+    267, 
+    268, 
+    269, 
+    272, 
+    273, 
+    274, 
+    275, 
+    276, 
+    277, 
+    278, 
+    279, 
+    280, 
+    281, 
+    284, 
+    285, 
+    286, 
+    287, 
+    288, 
+    289, 
+    290, 
+    291, 
+    292, 
+    295, 
+    296, 
+    297, 
+    298, 
+    299, 
+    300, 
+    301, 
+    302, 
+    303, 
+    304, 
+    305, 
+    306, 
+    309, 
+    310, 
+    311, 
+    312, 
+    313, 
+    314, 
+    315, 
+    316, 
+    317, 
+    318, 
+    319, 
+    322, 
+    323, 
+    324, 
+    325, 
+    326, 
+    327, 
+    328, 
+    329, 
+    330, 
+    333, 
+    334, 
+    335, 
+    336, 
+    337, 
+    338, 
+    339, 
+    340, 
+    341, 
+    342, 
+    343, 
+    344, 
+    347, 
+    348, 
+    349, 
+    350, 
+    351, 
+    352, 
+    353, 
+    354, 
+    355, 
+    356, 
+    357, 
+    360, 
+    361, 
+    362, 
+    363, 
+    364, 
+    365, 
+    366, 
+    367, 
+    368, 
+    371, 
+    372, 
+    373, 
+    374, 
+    375, 
+    376, 
+    377, 
+    378, 
+    379, 
+    380, 
+    381, 
+    382, 
+    385, 
+    386, 
+    387, 
+    388, 
+    389, 
+    390, 
+    391, 
+    392, 
+    393, 
+    394, 
+    395, 
+    398, 
+    399, 
+    400, 
+    401, 
+    402, 
+    403, 
+    404, 
+    405, 
+    406, 
+    407, 
+    410, 
+    411, 
+    412, 
+    413, 
+    414, 
+    415, 
+    416, 
+    417, 
+    418, 
+    419, 
+    420, 
+    421, 
+    424, 
+    425, 
+    426, 
+    427, 
+    428, 
+    429, 
+    430, 
+    431, 
+    432, 
+    435, 
+    436, 
+    437, 
+    438, 
+    439, 
+    440, 
+    441, 
+    442, 
+    443, 
+    444, 
+    445, 
+    446, 
+    449, 
+    450, 
+    451, 
+    452, 
+    453, 
+    454, 
+    455, 
+    456, 
+    457, 
+    458, 
+    459, 
+    462, 
+    463, 
+    464, 
+    465, 
+    466, 
+    467, 
+    468, 
+    469, 
+    470, 
+    473, 
+    474, 
+    475, 
+    476, 
+    477, 
+    478, 
+    479, 
+    480, 
+    481, 
+    482, 
+    483, 
+    484, 
+    487, 
+    488, 
+    489, 
+    490, 
+    491, 
+    492, 
+    493, 
+    494, 
+    495, 
+    496, 
+    497, 
+    500, 
+    501, 
+    502, 
+    503, 
+    504, 
+    505, 
+    506, 
+    507, 
+    508, 
+    511, 
+    512, 
+    513, 
+    514, 
+    515, 
+    516, 
+    517, 
+    518, 
+    519, 
+    520, 
+    521, 
+    522, 
+    525, 
+    526, 
+    527, 
+    528, 
+    529, 
+    530, 
+    531, 
+    532, 
+    533, 
+    534, 
+    535, 
+    538, 
+    539, 
+    540, 
+    541, 
+    542, 
+    543, 
+    544, 
+    545, 
+    546, 
+    549, 
+    550, 
+    551, 
+    552, 
+    553, 
+    554, 
+    555, 
+    556, 
+    557, 
+    558, 
+    559, 
+    560, 
+    563, 
+    564, 
+    565, 
+    566, 
+    567, 
+    568, 
+    569, 
+    570, 
+    571, 
+    572, 
+    575, 
+    576, 
+    577, 
+    578, 
+    579, 
+    580, 
+    581, 
+    582, 
+    583, 
+    586, 
+    587, 
+    588, 
+    589, 
+    590, 
+    591, 
+    592, 
+    593, 
+    594, 
+    595, 
+    596, 
+    597, 
+    600, 
+    601, 
+    602, 
+    603, 
+    604, 
+    605, 
+    606, 
+    607, 
+    608, 
+    609, 
+    610, 
+    613, 
+    614, 
+    615, 
+    616, 
+    617, 
+    618, 
+    619, 
+    620, 
+    621, 
+    624, 
+    625, 
+    626, 
+    627, 
+    628, 
+    629, 
+    630, 
+    631, 
+    632, 
+    633, 
+    634, 
+    635, 
+    638, 
+    639, 
+    640, 
+    641, 
+    642, 
+    643, 
+    644, 
+    645, 
+    646, 
+    647, 
+    648, 
+    651, 
+    652, 
+    653, 
+    654, 
+    655, 
+    656, 
+    657, 
+    658, 
+    659, 
+    660, 
+    663, 
+    664, 
+    665, 
+    666, 
+    667, 
+    668, 
+    669, 
+    670, 
+    671, 
+    672, 
+    673, 
+    674, 
+    677, 
+    678, 
+    679, 
+    680, 
+    681, 
+    682, 
+    683, 
+    684, 
+    685, 
+    688, 
+    689, 
+    690, 
+    691, 
+    692, 
+    693, 
+    694, 
+    695, 
+    696, 
+    697, 
+    698, 
+    699, 
+    702, 
+    703, 
+    704, 
+    705, 
+    706, 
+    707, 
+    708, 
+    709, 
+    710, 
+    711, 
+    712, 
+    715, 
+    716, 
+    717, 
+    718, 
+    719, 
+    720, 
+    721, 
+    722, 
+    723, 
+    724, 
+    727, 
+    728, 
+    729, 
+    730, 
+    731, 
+    732, 
+    733, 
+    734, 
+    735, 
+    736, 
+    737, 
+    738, 
+    739
+  ], 
+  "heads": [[622, 0, 0]], 
+  "attrs": {"mxnet_version": ["int", 1100]}
+}
