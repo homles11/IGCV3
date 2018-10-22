@@ -70,7 +70,7 @@ def inverted_residual_unit(data, num_in_filter, num_filter, ifshortcut, stride, 
         if_act=False,
         prefix='%s-linear'%prefix
     )
-    linear_out = permutation(data=linear_out,groups=num_filter/2)
+#     linear_out = permutation(data=linear_out,groups=num_filter/2)
     if ifshortcut:
         out = shortcut(
             data_in=data,
